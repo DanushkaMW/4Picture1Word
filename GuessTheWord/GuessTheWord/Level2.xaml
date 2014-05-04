@@ -1,0 +1,301 @@
+﻿<Page
+    x:Class="GuessTheWord.Level2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GuessTheWord"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Name="LayoutRoot" Background="#FF9D5F24">
+        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Name="grdHeader">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="650"/>
+                <ColumnDefinition Width="450"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock FontFamily="Buxton Sketch" FontSize="100"  Height="Auto" Width="Auto"
+                       Margin="0,5,0,0" TextWrapping="Wrap" Text="Guess The Word ?" 
+                       VerticalAlignment="Top" HorizontalAlignment="Left" 
+                       Grid.Column="0"/>
+
+            <TextBlock FontFamily="Buxton Sketch" FontSize="100" Height="100" Width="247"
+                       Margin="100,5,0,0" TextWrapping="Wrap" Text="Level 2" 
+                       VerticalAlignment="Top" HorizontalAlignment="Left"
+                       Grid.Column="1"/>
+
+        </Grid>
+
+        <Grid Name="grdLatters" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Name="grdWord"  Margin="200,0,0,0" Width="Auto">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="150"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0" Background="White" Height="100" Width="100" Margin="10,10,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Name="txtB1" FontSize="60" Grid.Row="0" Foreground="Black" 
+                           HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Height="70" Width="70" 
+                           TextWrapping="Wrap" Text="" DoubleTapped="txtB1_DoubleTapped"/>
+
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="1" Background="White" Height="100" Width="100" Margin="10,10,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Name="txtB2" FontSize="60" Grid.Row="0" Foreground="Black" 
+                           HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Height="70" Width="70" 
+                           TextWrapping="Wrap" Text="" DoubleTapped="txtB2_DoubleTapped"/>
+
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="2" Background="White" Height="100" Width="100" Margin="10,10,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Name="txtB3" FontSize="60" Grid.Row="0" Foreground="Black" 
+                           HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Height="70" Width="70" 
+                           TextWrapping="Wrap" Text="" DoubleTapped="txtB3_DoubleTapped"/>
+
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="3" Background="White" Height="100" Width="100" Margin="10,10,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Name="txtB4" FontSize="60" Grid.Row="0" Foreground="Black" 
+                           HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Height="70" Width="70" 
+                           TextWrapping="Wrap" Text="" DoubleTapped="txtB4_DoubleTapped"/>
+
+                </Grid>
+
+                <Grid Grid.Row="0" Grid.Column="4" Background="White" Height="100" Width="100" Margin="10,10,10,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Name="txtB5" FontSize="60" Grid.Row="0" Foreground="Black" 
+                           HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Height="70" Width="70" 
+                           TextWrapping="Wrap" Text="" DoubleTapped="txtB5_DoubleTapped"/>
+
+                </Grid>
+
+                <Ellipse Name="eSubmit" Grid.Column="6" Margin="10,0,0,0" StrokeThickness="5"  HorizontalAlignment="Center" Height="100" Stroke="White" VerticalAlignment="Center" Width="100" Tapped="eSubmit_Tapped" PointerEntered="eSubmit_PointerEntered" PointerExited="eSubmit_PointerExited">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="Assets/check.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+
+
+            </Grid>
+
+            <Grid Grid.Row="1" Width="Auto" Margin="100,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+                    <ColumnDefinition MaxWidth="100"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Grid.Row="0" Content="D" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+                <Button Grid.Column="1" Grid.Row="0" Content="I" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+                <Button Grid.Column="2" Grid.Row="0" Content="S" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+                <Button Grid.Column="3" Grid.Row="0" Content="K" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+                <Button Grid.Column="4" Grid.Row="0" Content="A" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+                <Button Grid.Column="5" Grid.Row="0" Content="R" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+                <Button Grid.Column="6" Grid.Row="0" Content="L" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+                <Button Grid.Column="7" Grid.Row="0" Content="N" FontSize="30" HorizontalAlignment="Center" Height="103"  VerticalAlignment="Center" Width="99" BorderBrush="#FFF3EAEA" Background="#FF202021" Click="Latter_Click"/>
+
+
+
+            </Grid>
+
+        </Grid>
+
+        <ScrollViewer Name="scrViewImg" Grid.Row="2" Margin="0,80,0,0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">
+            <Grid Name="grdImages" Grid.Row="2" Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MaxWidth="270"/>
+                    <ColumnDefinition MaxWidth="270"/>
+                    <ColumnDefinition MaxWidth="270"/>
+                    <ColumnDefinition MaxWidth="270"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" HorizontalAlignment="Left" Height="270" Margin="10,0,0,0" VerticalAlignment="Top" Width="270" Background="White">
+                    <Image  HorizontalAlignment="Center" Height="250" Margin="0,0,0,0" VerticalAlignment="Center" Width="250" Source="Assets/drink1.jpg"/>
+
+                </Grid>
+
+                <Grid Grid.Column="1" HorizontalAlignment="Left" Height="270" Margin="10,0,0,0" VerticalAlignment="Top" Width="270" Background="White">
+                    <Image  HorizontalAlignment="Center" Height="250" Margin="0,0,0,0" VerticalAlignment="Center" Width="250" Source="Assets/drink2.jpg"/>
+
+                </Grid>
+
+                <Grid Grid.Column="2" HorizontalAlignment="Left" Height="270" Margin="10,0,0,0" VerticalAlignment="Top" Width="270" Background="White">
+                    <Image  HorizontalAlignment="Center" Height="250" Margin="0,0,0,0" VerticalAlignment="Center" Width="250" Source="Assets/drink3.jpg"/>
+
+                </Grid>
+
+                <Grid Grid.Column="3" HorizontalAlignment="Left" Height="270" Margin="10,0,10,0" VerticalAlignment="Top" Width="270" Background="White">
+                    <Image  HorizontalAlignment="Center" Height="250" Margin="0,0,0,0" VerticalAlignment="Center" Width="250" Source="Assets/drink4.jpg"/>
+
+                </Grid>
+
+            </Grid>
+
+
+        </ScrollViewer>
+
+
+        <Grid Name="snappedState" HorizontalAlignment="Center" Height="768"  VerticalAlignment="Center" Width="320" Visibility="Collapsed" >
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/snapBackground.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock FontSize="50" FontFamily="Buxton Sketch" Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Guess The Word" VerticalAlignment="Top"/>
+            <Image HorizontalAlignment="Left" Height="115.658" Margin="34.069,61.171,0,0" Grid.Row="1" VerticalAlignment="Top" Width="112.862" Source="Assets/sport1.jpg" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-33.335"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="124.906" Margin="140.083,43.547,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134.834" RenderTransformOrigin="0.5,0.5" Source="Assets/Maths3.jpg" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-16.181"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="147" Margin="19,186,0,0" Grid.Row="1" VerticalAlignment="Top" Width="139" Source="Assets/jump3.jpg"/>
+            <Image HorizontalAlignment="Left" Height="100.322" Margin="178.539,174.839,0,0" Grid.Row="1" VerticalAlignment="Top" Width="99.922" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Source="Assets/Education3.jpg">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-31.777"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="90" Margin="32,299,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5" Source="Assets/love3.jpg">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="37.334"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="137" Margin="158,277,0,0" Grid.Row="1" VerticalAlignment="Top" Width="129" Source="Assets/smile1.jpg"/>
+            <Image HorizontalAlignment="Left" Height="142.284" Margin="39.047,392.358,0,0" Grid.Row="1" VerticalAlignment="Top" Width="136.906" RenderTransformOrigin="0.5,0.5" Source="Assets/Sign3.jpg" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-7.06"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="137" Margin="172,438,0,0" Grid.Row="1" VerticalAlignment="Top" Width="129" Source="Assets/Water4.jpg"/>
+
+        </Grid>
+
+        <Grid Name="potratemoode" HorizontalAlignment="Center" Height="1366" Width="768"  VerticalAlignment="Center" Visibility="Collapsed" >
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/snapBackground.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock FontSize="100" FontFamily="Buxton Sketch" Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Guess The Word" VerticalAlignment="Top"/>
+            <Image HorizontalAlignment="Left" Height="195.231" Margin="138.928,94.493,0,0" Grid.Row="1" VerticalAlignment="Top" Width="246.74" Source="Assets/sport1.jpg" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-28.353" SkewX="10.368" ScaleY="1.053" ScaleX="0.949"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="211.271" Margin="357.096,66.826,0,0" Grid.Row="1" VerticalAlignment="Top" Width="277.989" RenderTransformOrigin="0.5,0.5" Source="Assets/Maths3.jpg" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-13.39" SkewX="6.088" ScaleY="1.013" ScaleX="0.988"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="248" Margin="108,310,0,0" Grid.Row="1" VerticalAlignment="Top" Width="287" Source="Assets/jump3.jpg"/>
+            <Image HorizontalAlignment="Left" Height="169.69" Margin="436.908,289.732,0,0" Grid.Row="1" VerticalAlignment="Top" Width="206.009" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Source="Assets/Education3.jpg">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-26.941" SkewX="10.115" ScaleY="1.049" ScaleX="0.953"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="152.231" Margin="134.754,500.574,0,0" Grid.Row="1" VerticalAlignment="Top" Width="185.554" RenderTransformOrigin="0.5,0.5" Source="Assets/love3.jpg" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="32.036" SkewX="-10.877" ScaleY="1.065" ScaleX="0.938"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="232" Margin="395,463,0,0" Grid.Row="1" VerticalAlignment="Top" Width="265" Source="Assets/smile1.jpg"/>
+            <Image HorizontalAlignment="Left" Height="240.667" Margin="149.362,657.942,0,0" Grid.Row="1" VerticalAlignment="Top" Width="282.261" RenderTransformOrigin="0.5,0.5" Source="Assets/Sign3.jpg" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <Image.RenderTransform>
+                    <CompositeTransform Rotation="-5.801" SkewX="2.782" ScaleY="1.002" ScaleX="0.998"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="232" Margin="423,735,0,0" Grid.Row="1" VerticalAlignment="Top" Width="266" Source="Assets/Water4.jpg"/>
+
+        </Grid>
+
+
+        
+
+    </Grid>
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomAppBar1" Padding="10,0,10,0" AutomationProperties.Name="Bottom App Bar">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel x:Name="LeftPanel" Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left">
+                    <Button Style="{StaticResource HelpAppBarButtonStyle}" Name="btnHelp" IsEnabled="True" Click="btnHelp_Click" />
+                    <Button x:Name="btnSkydriveUpload" Style="{StaticResource UploadSkyDriveAppBarButtonStyle}"  IsEnabled="True" Click="UploadToSkydrive" />
+
+                </StackPanel>
+            </Grid>
+
+        </AppBar>
+
+    </Page.BottomAppBar>
+
+
+
+</Page>
